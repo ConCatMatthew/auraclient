@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Aura Download</title>
+<style>
+  body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #2f2f2f;
+    color: #fff;
+    font-family: Arial, sans-serif;
+  }
+
+  #download-section {
+    background-color: #4b4b4b;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    text-align: center;
+  }
+
+  #download-section input[type="submit"] {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #333;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+  }
+
+  #notification {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: #4b4b4b;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+  }
+</style>
+</head>
+<body>
+
+<div id="download-section">
+  <h2>AuraClient Download</h2>
+  <form id="download">
+    <input type="submit" value="Download .EXE">
+  </form>
+</div>
+
+<div id="notification"></div>
+
+<script>
+  document.getElementById('download').addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    // Simulate file download
+    showNotification('Download started.');
+  });
+
+  function showNotification(message) {
+    var notification = document.getElementById('notification');
+    notification.textContent = message;
+    notification.style.opacity = '1';
+    setTimeout(function() {
+      notification.style.opacity = '0';
+    }, 3000);
+  }
+</script>
+
+</body>
+</html>
