@@ -25,13 +25,15 @@
     text-align: center;
   }
 
-  #download-section input[type="submit"] {
+  #download-section a {
+    display: inline-block;
     padding: 10px 20px;
     border: none;
     border-radius: 5px;
     background-color: #333;
     color: #fff;
     font-size: 16px;
+    text-decoration: none;
     cursor: pointer;
   }
 
@@ -53,9 +55,7 @@
 
 <div id="download-section">
   <h2>AuraClient Download</h2>
-  <form id="download">
-    <input type="submit" value="Download .EXE">
-  </form>
+  <a href="https://github.com/ConCatMatthew/auraclient/raw/main/AuraClient%20V5.exe" download="AuraClient.exe">Download .EXE</a>
 </div>
 
 <div id="notification"></div>
