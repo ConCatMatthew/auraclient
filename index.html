@@ -61,6 +61,7 @@
     <input type="text" id="username" placeholder="Username" required>
     <input type="password" id="password" placeholder="Password" required>
     <input type="submit" value="Login">
+    <h5>WIP SITE</h5>
   </form>
 </div>
 
@@ -77,7 +78,7 @@
     if (username === 'user' && password === 'password') {
       showNotification('Login successful');
       setTimeout(function() {
-        window.location.href = 'index.html';
+        window.location.href = 'main.html';
       }, 3000);
     } else {
       showNotification('Incorrect username or password');
