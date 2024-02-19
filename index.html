@@ -2,7 +2,6 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<link rel="icon" type="image/x-icon" href="auraclient.png">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Login</title>
 <style>
@@ -12,6 +11,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
     height: 100vh;
     background-color: #2f2f2f;
     color: #fff;
@@ -29,7 +29,8 @@
   #login-form input[type="text"],
   #login-form input[type="password"],
   #login-form input[type="submit"] {
-    width: 100xp;
+    width: 100%;
+    max-width: 300px;
     padding: 10px;
     margin-bottom: 15px;
     border: none;
@@ -51,6 +52,17 @@
     opacity: 0;
     transition: opacity 0.5s ease-in-out;
   }
+
+  #credits-button {
+    margin-top: 20px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+  }
 </style>
 </head>
 <body>
@@ -62,11 +74,12 @@
     <input type="text" id="username" placeholder="Username" required>
     <input type="password" id="password" placeholder="Password" required>
     <input type="submit" value="Login">
-    <h5>WIP SITE</h5>
   </form>
 </div>
 
 <div id="notification"></div>
+
+<button id="credits-button" onclick="goToCredits()">Go to Credits</button>
 
 <script>
   document.getElementById('login').addEventListener('submit', function(event) {
@@ -93,6 +106,10 @@
     setTimeout(function() {
       notification.style.opacity = '0';
     }, 3000);
+  }
+
+  function goToCredits() {
+    window.location.href = 'credits.html';
   }
 </script>
 
